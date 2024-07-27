@@ -1,0 +1,423 @@
+강사컴퓨터접근 ip
+\\192.168.137.10
+
+교재는 마지막 7월27일 토요일에 가져오시면 됩니다
+ ㄴ305페이지 sql.js문서  보고 오시면 됩니다 
+
+https://vuejs.org/
+
+
+집에서 실습하려면 반드시
+ C:~~~first> npm install 명령 해야 
+   node-modules폴더 생성되어야 실습가능합니다 
+    
+교재는 7월27일 마지막날에만 가져오세요 
+7월27일 토요일 - 마지막날에는 교재 플제 응용 
+
+7월20일 토요일
+ ㄴNodejs서버구축 express구현(리액트 똑같음)
+ ㄴSQL쿼리문이해
+ ㄴ우리교재 마지막챕터 상품등록...
+ ㄴmysql설치후  설치경로및 제어판 서비스 확인 
+
+백단서비스   실행 npm  
+프런트서비스 실행 npm run serve
+2개 어플리케이션에서 서로 데이터주고 받아야 합니다 
+
+json-server --watch  db.json먼저 띄움 
+npm run server 
+
+
+백단서비스 - nodeJS/자바기반스프링/파이썬기반django => 어플새로작성
+           데이터베이스 mysql사용(등록저장, 전체출력, 삭제, 조회, 갯수)
+백단서비스 실행 npm 
+
+프런트서비스 - vueJS문법으로 화면구성, SQL문장 + axios및 cors자원공유 
+프런트서비스 실행 npm run serve
+
+
+백단역할 nodejs이미 설치     
+백단의 데이터저장 mysql사이트 www.mysql.com
+https://dev.mysql.com/downloads/
+
+참고사이트
+https://www.w3schools.com/vue/index.php
+
+
+
+mysql서비스
+윈도우시작버튼 클릭 제어판
+ㄴ제어판 -> 관리도구 -> 서비스
+  Mysql선택후 더블클릭
+    서비스 정지=중지 
+
+C:\Program Files\MySQL~~~폴더 있는지확인
+
+
+*-------------------------------------------------------------------
+*-------------------------------------------------------------------
+7월13일 토요일
+ ㄴaxios처리를 compositionAIP변경 ===> 출력, 삭제처리 성공
+ ㄴslot개념 - <slot태그 :age="age">
+ ㄴ부모 ~ 자식 데이터 전달  $emit
+ ㄴvuetify  https://vuetifyjs.com/en/
+ ㄴmysql다운로드 설치
+
+
+mysql서비스 먼저  중지시키고 삭제해야함
+윈도우시작버튼 클릭 제어판
+ㄴ제어판 -> 관리도구 -> 서비스
+  Mysql선택후 더블클릭
+    서비스 정지=중지 
+
+
+C:\Program Files\MySQL~~~폴더 있는지확인
+
+
+
+SonComponent.vue문서
+ ㄴname
+ ㄴprops
+ ㄴemits처음기술
+ ㄴdata(){ }
+ ㄴmethods
+ ㄴcreated()
+ ㄴwatch처음기술
+
+
+
+강사컴퓨터 아이피주소 \\192.168.137.10
+ jumin = "971230-3810964" ; 
+ mydata  = "blue" ;
+
+ 자바스크립트, vueJS, react, 파이썬, 자바에서
+ 문자열은 0번째 시작입니다 
+ mydata[0]는 b 
+ 문자열의 몇번째 위치를 가르키는 키워드 
+
+ jumin = "971230-1810964" ; 
+ char gender  = jumin.charAt(7);   1숫자는 남자  2숫자는 여자
+                                   2000년부터는 3숫자도 남자 4숫자는 여자
+1,3 이면 남자 / 2,4 이면 여자 
+if ~ else if ~ 남자인지 여자인지 구별 
+if( gender==='1' ||  gender==='3') {  남자출력 }
+else if( gender==='2' ||  gender==='4') {  여자출력 }
+else {  console.log("성별기입을 잘못하셨습니다") ;   }
+
+ App.vue문서에서 blue보내면 SonComponent.vue문서 Blue 적용
+ 그런데 SonComponent.vue에서 내용변경 Blue대신 last입력하면 Last출력 
+ mydata  = "blue" ;
+ console.log( mydata.charAt(0).toUpperCase() + mydata.slice(1)) ;  결과는  BLUE
+
+
+
+
+
+두번째 slot개념
+ slot태그로 App.vue에게 전달 
+ 일반적인 값전달  부모에서 자식 HelloWorld.vue문서 msg속성값으로 전달, 배열데이터 함수전달 todo
+ <image source width="200" height="150" alternate="카페"> 
+ <img src="파일" width="200" height="150" alt="카페" title="카페"> 
+   속성width="200" 속성height="150" 속성alt="카페" 속성title="카페"> 
+   속성 = property 
+   vueJS에서  속성 pros
+ <HelloWorld컴포넌트  속성msg="데이터" >   
+
+
+
+첫번째 axios처리를 compositionAIP변경
+ ㄴdb.json문서 
+{
+  "guests": [
+    {
+      "id": "1",
+      "title": "note"
+    },
+    {
+      "id": "2",
+      "title": "book"
+    }
+  ]
+} 
+   
+   json-server실행은 powershell에서 실행안됨
+   +▽ command prompt선택후 
+ ㄴjson-server --watch db.json실행
+
+   컴포지션API
+    <script setup>
+       import axios from 'axios';
+       import {ref, onMounted} from 'vue'
+       const  guests = ref ([]);
+       const  Newmessage = ref ({title: ''});
+       const  errerMessage = ref ('');
+    </script>
+
+
+ ㄴ플젝은 npm run serve
+
+ 데이터입력이 없거나 1글자일때  입력안되도록
+ 데이터입력이 없거나 1글자일때 적절한 안내메세지
+ 데이터를 입력하세요
+ 데이터는 한글자 이상 입력하세요 
+ 함수내용을 처리하지 않고 탈출 키워드 return이용 
+ 
+
+ <button  onClick="함수이름()"> 저장 </button>
+ <button  @click="함수이름"> 저장 </button>
+ <button  v-on:click="함수이름"> 저장 </button>
+ methods:{
+    test(){ }
+ }
+ mounted:{ }
+
+
+7월6일 토요일
+ ㄴtodo할일 등록, 출력, 삭제  -->데이터값이동
+   웹브라우저 스토리지 등록/삭제 
+ ㄴaxios처리  db.json (databse의 crud,리액트)
+    ㄴ141페이지 설명
+ ㄴ라우터 화면메뉴 a태그나 버튼이용해서 문서이동을 라우터 
+    ㄴ73페이지 vue add router 설치권장
+    npm install router 비권장
+    npm install vue-router 비권장
+
+ ㄴcompositionAPI 
+
+교재는 마지막 7월27일 토요일에 가져오시면 됩니다
+ ㄴ305페이지 sql.js문서  보고 오시면 됩니다 
+
+  axios처리를 위해서 설치
+  npm i axios
+  npm install json-server --save-dev 
+  실행 json서버실행 
+C:\Mtest\first> json-server --watch db.json
+
+웹에서 서버응답의 의미는 response = res 
+웹에서 서버에요청 의미는 request  = req
+
+
+
+ ㄴ라우터 화면메뉴 a태그나 버튼이용해서 문서이동을 라우터 
+ ㄴcompositionAPI 
+
+
+App.vue문서  메소드처리 2개  TodoTest컴포넌트한테 전달
+      실제데이터:skytodo="item"
+      @대표-이름=deleteTodo, @대표-이름=greenCheckbox
+
+
+
+vscode에서 실행  $ npm run serve
+C:\Mtest\first>npm run serve
+
+강사컴퓨터접근 ip
+\\192.168.137.10
+
+AAA.vue문서에서 전체출력, 신규등록
+BBB.vue문서에서 삭제,옵션변경하면 AAA.vue적용 
+
+*--------------------------------------------------
+*--------------------------------------------------
+VScode 플젝생성및 실행
+C:\Mtest> vue create first
+ $ cd first
+ $ npm run serve
+C:\Mtest> cd first
+C:\Mtest\first> VScode에서 실행
+
+
+7월06일 토요일 
+오전
+ todoList배열에 값추가 성공, 삭제, 체크박스적용
+ 스토리지저장, 스토리지삭제, json문서 mygame.json응용 axios라이브러
+ 라우터  
+
+
+C드라이브 Mtest
+D드라이브 Mtest 
+vue소스작성 VScode진행
+
+윈도우시작아이콘 클릭
+ cmd
+C:\Users\Administrator>
+C:\Users\Administrator>ipconfig
+ \\192.168.137.10
+
+
+윈도우시작아이콘 클릭  \\192.168.137.10
+
+cmd
+C:\Users\Administrator> cd\
+C:\> cd Mtest
+C:\Mtest> cls
+C:\Mtest> path
+C:\Mtest> cls
+
+참고필수설치 nodejs백단역할 npm명령어확인
+참고편집설치 VScode설치 - vuejs명령어기술 실행
+
+https://ko.vuejs.org/   
+https://www.w3schools.com/
+https://nodejs.org/en   
+EcmaScript = ES6 
+(European Computer Manufactures Association)
+
+영임쌤껏 컴퓨터 접근
+ \\192.168.137.10
+
+*--------------------------------------------------------------
+*--------------------------------------------------------------
+VScode 플젝생성및 실행
+C:\Mtest> vue create first
+C:\Mtest> cd first
+C:\Mtest\first> npm run serve
+
+7월06일 토요일 
+오전
+ todoList배열에 값추가 성공, 삭제, 체크박스적용
+ 스토리지저장, 스토리지삭제, json문서 mygame.json응용 axios라이브러
+ 라우터  
+
+
+6월29일 토요일 
+오전
+ 변수값대입, 출력{{}}, 함수기술및 이벤트연결
+
+오후 
+ 배열, 컴포넌트새로생성후 컴포넌트값전달 
+ ㄴtodo등록은 App.vue문서 - 리스트객체배열등록 폼태그, 배열명령어 push,reduce
+ ㄴ체크태그,삭제 TodoTest.vue처리 
+ 미션1] App.vue문서 등록  push(id는 1씩 , checked:false)
+
+ components폴더  새로운문서  TodoTest.vue
+ 미션2] TodoTest.vue문서  todoList배열 삭제버튼
+ 미션3] TodoTest.vue문서  todoList배열 checked항목을 checkbox태그표현
+
+
+<img src="./images/bbb.gif" alt="한강" width="200" height="70" border="1" />
+ alt width height border 속성=properties
+
+<Hello  kakao="백합" />
+   kakao 속성을  HelloWord.vue문서  prop~~~
+
+연산종류
+ㄴ 사칙연산 + - * / %
+ㄴ 관계비교연산  >  <  == !=  >= 
+ㄴ 논리연산  and  or  not
+ㄴ 대입연산  정석total = total + su ;  대입total  += su 
+ㄴ 단항연산 증감연산  su=1 ; su++ ; su--;
+ㄴ 삼항연산, 비트연산, shift연산
+   삼항연산  su=75;  리턴값 = (su>=70 ) ?  합격 : 재시험 ; 
+
+ ㄴ데이터영구저장 웹브라우저 저장고
+ ㄴjson서버 띄워 데이터출력 axios라이브러리 
+
+7월6일 토요일 
+ ㄴ교재, 라우터, 
+ ㄴ데이터영구저장 웹브라우저 저장고
+ ㄴaxios
+ ㄴjson서버 띄워 데이터출력 axios라이브러리 
+ 
+
+VScode프로그램 설치
+ https://code.visualstudio.com/download
+ vscode확장
+  ㄴPrettier
+  ㄴAuto Close Tag
+  ㄴVue 3 snippets   hollowtree 뷰vue문서 자동화완성 
+
+
+
+
+vue잘하는 비결
+ㄴ그룹화
+ <template> 
+   <div> <h2>제목</h2> <p></p> <br>  </div>   
+ </template>
+ <script> 자바스크립트코드기술 kor: 95 ,배열, 처리하는함수=메소드  </script>
+ <style> 스타일 </style>
+
+ㄴthis키워드 활용
+  힌트1] data(){접근할때 this}
+
+디렉티브(Directives)란?
+디렉티브는 v-접두사가 있는 특수 속성이다. 그대로 직역하면 '지시'를 뜻한다.
+즉, 디렉티브는 기능상에서 중요한 역할인 컴포넌트(또는 DOM요소)에게 "~~~하게 " 지시해주는 지시문을 말한다.
+Vue는 여러가지 내장 디렉티브를 제공한다.
+v-text
+v-html
+v-show
+v-for 
+v-if
+v-on
+v-bind
+v-model
+
+
+
+배열이해 정확히 있어야 합니다 
+ { 이름:홍구동, 국어:75, 영어:90 }
+ [ 홍구동, 75, 90 ] 
+
+ [ 
+ { 이름:홍구동, 국어:75, 영어:90 } ,
+ { 이름:이순신, 국어:56, 영어:100 } 
+ ] 
+
+
+vue 생명주기
+ㄴCreation: Vue 인스턴스의 생성 단계입니다. beforeCreate, created의 두 단계로 구성되어 있습니다.
+ㄴMounting: Vue 인스턴스와 DOM 요소를 연결하는 단계입니다. beforeMount, mounted의 두 단계로 구성되어 있습니다. 
+ㄴUpdating: Vue 인스턴스가 업데이트되는 단계입니다. beforeUpdate, updated의 두 단계로 구성되어 있습니다. 
+ㄴDestroying: Vue 인스턴스의 소멸 단계입니다. beforeDestroy, destroyed의 두 단계로 구성되어 있습니다.
+*--------------------------------------------------------------
+*--------------------------------------------------------------
+\\192.168.137.10
+
+
+vueJS장점
+ㄴangular(구글) 데이터바인딩 쉽고,편함 + 리액트(페북)가상돔
+ㄴMVVM = model view viewModel
+ㄴ컴포넌트재사용
+ㄴ기본 javascript + html태그 지원
+
+
+C:\Users\Administrator> cd\
+C:\> cd Mtest
+C:\Mtest> cls
+C:\Mtest> path
+C:\Mtest> cls
+
+vueCLI = vue + command line interface
+C:\Mtest> npm installl  -g @vue/cli  
+C:\Mtest> vue --version
+          vue프로젝트 생성  first/note/book
+
+VScode 플젝생성및 실행
+C:\Mtest> vue create first
+ $ cd first
+ $ npm run serve
+
+C:\Mtest> cd first
+C:\Mtest\first>  아직실행금지 
+
+
+VScode프로그램 설치
+ https://code.visualstudio.com/download
+ vscode확장
+  ㄴPrettier
+  ㄴAuto Close Tag
+  ㄴVue 3 snippets   hollowtree 뷰vue문서 자동화완성 
+
+
+
+first플젝
+ㄴnode_modules없으면 실행안됨 필수 대용량
+ㄴpublic
+ㄴsrc
+ㄴpackage.json
+
+
+
+
